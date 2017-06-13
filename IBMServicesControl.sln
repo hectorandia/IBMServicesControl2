@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBMServicesControl_1.0", "IBMServicesControl\IBMServicesControl_1.0.csproj", "{3BFDB48D-25C4-4ED1-9DCC-6CA5A8AF77B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceQuery", "ServiceQuery\ServiceQuery.csproj", "{C531753D-84F4-45B0-83AF-F0268BD99FA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BFDB48D-25C4-4ED1-9DCC-6CA5A8AF77B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BFDB48D-25C4-4ED1-9DCC-6CA5A8AF77B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BFDB48D-25C4-4ED1-9DCC-6CA5A8AF77B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BFDB48D-25C4-4ED1-9DCC-6CA5A8AF77B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C531753D-84F4-45B0-83AF-F0268BD99FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C531753D-84F4-45B0-83AF-F0268BD99FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C531753D-84F4-45B0-83AF-F0268BD99FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C531753D-84F4-45B0-83AF-F0268BD99FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
