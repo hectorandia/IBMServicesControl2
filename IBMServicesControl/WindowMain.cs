@@ -12,6 +12,7 @@ using System.ServiceProcess;
 using System.Management;
 using MetroFramework;
 using System.IO;
+using IBMServicesControl.HelperWindow;
 
 
 namespace IBMServicesControl
@@ -36,7 +37,6 @@ namespace IBMServicesControl
         {
             query = new QueryServices();
             query.RegisterObs(this);
-
             SetStarComboBoxServerTypValue();
             selectServiceComBox.SelectedItem = 0;            
             selectServerTypComBox.SelectedIndex = 0;
@@ -550,7 +550,16 @@ namespace IBMServicesControl
 
         private void serversToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            openServerFileDialog1.Filter = "CSV File|*.csv";
+            openServerFileDialog1.ShowDialog();
+            //WindowServerEditor serverEditor = new WindowServerEditor();
+            //serverEditor.Show();
+        }
+
+        private void servicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openServicesFileDialog1.Filter = "CSV File|*.csv";
+            openServicesFileDialog1.ShowDialog();
         }
     }
 }

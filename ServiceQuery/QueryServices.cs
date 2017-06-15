@@ -28,6 +28,8 @@ namespace ServiceQuery
         private List<string> ServicesListTypAux;
         private List<string> ServersListTyp;
         private List<string> ServersListTypAux;
+        private string pathServers;
+        private string pathServices;
 
         public QueryServices()
         {
@@ -157,6 +159,30 @@ namespace ServiceQuery
             get
             {
                 return ServersListTyp;
+            }
+        }
+
+        public string PathServers
+        {
+            get
+            {
+                return pathServers;
+            }
+            set
+            {
+                pathServers = info.PathServers1;
+            }
+        }
+
+        public string PathServices
+        {
+            get
+            {
+                return pathServices;
+            }
+            set
+            {
+                pathServices = info.PathServices1;
             }
         }
 

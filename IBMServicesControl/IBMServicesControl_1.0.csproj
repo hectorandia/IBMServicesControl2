@@ -102,6 +102,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelperWindow\WindowServerEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperWindow\WindowServerEditor.Designer.cs">
+      <DependentUpon>WindowServerEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServerInfo.cs" />
     <Compile Include="WindowMain.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HelperWindow\WindowServerEditor.resx">
+      <DependentUpon>WindowServerEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
