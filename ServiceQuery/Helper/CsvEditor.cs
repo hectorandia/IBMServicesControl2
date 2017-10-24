@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Data;
+using Microsoft.VisualBasic.FileIO;
+
 namespace ServiceQuery.Helper
 {
     public class CsvEditor : IEditor
     {
+        private DataTable csvData;
+
         public void OpenFileWithEditor()
         {
             
