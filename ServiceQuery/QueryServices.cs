@@ -235,27 +235,44 @@ namespace ServiceQuery
         }
 
 
+        //public string StartModeService(string serverName, string serviceName)
+        //{
+        //    string mode = "";
+        //    try
+        //    {
+        //        conection = ConectToServer(serverName);
+
+        //        SelectQuery wmiQuery = new SelectQuery("SELECT * FROM Win32_Service WHERE Name='" + serviceName + "'");
+        //        var searcher = new ManagementObjectSearcher(conection, wmiQuery);
+        //        var results = searcher.Get();
+
+        //        foreach (ManagementObject service in results)
+        //        {
+        //            mode = service["StartMode"].ToString();
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        mode = " ";
+        //    }
+            
+        //    return mode;
+        //}
+
         public string StartModeService(string serverName, string serviceName)
         {
             string mode = "";
             try
             {
-                conection = ConectToServer(serverName);
-
-                SelectQuery wmiQuery = new SelectQuery("SELECT * FROM Win32_Service WHERE Name='" + serviceName + "'");
-                var searcher = new ManagementObjectSearcher(conection, wmiQuery);
-                var results = searcher.Get();
-
-                foreach (ManagementObject service in results)
-                {
-                    mode = service["StartMode"].ToString();
-                }
+                var ctl = ServiceController.GetServices(serverName).FirstOrDefault(s => s.ServiceName == serviceName);
+                if (ctl != null)
+                    mode = ctl.StartType.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 mode = " ";
             }
-            
+
             return mode;
         }
 
